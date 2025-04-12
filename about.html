@@ -3,19 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Dr. P.I Skosana Dental Excellence</title>
+    <title>Dr. P.I Skosana Dental Excellence</title>
+    <meta name="description" content="Experience exceptional dental care with Dr. P.I Skosana. From cosmetic dentistry to advanced treatments, we prioritize your smile.">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Dr. P.I Skosana Dental Excellence">
+    <meta property="og:description" content="Experience exceptional dental care with Dr. P.I Skosana. From cosmetic dentistry to advanced treatments, we prioritize your smile.">
+    <meta property="og:image" content="https://example.com/images/hero-image.jpg">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:type" content="website">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Dentist",
+        "name": "Dr. P.I Skosana Dental Excellence",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Office No 211 Upperground KaMkholo Building, 26 Brown St",
+            "addressLocality": "Mbombela",
+            "postalCode": "1200"
+        },
+        "telephone": "+27137522757",
+        "url": "https://example.com"
+    }
+    </script>
     <link href="styles.css" rel="stylesheet">
-    <meta name="description" content="Learn about Dr. P.I Skosana and our commitment to providing exceptional dental care with advanced technology and personalized treatment.">
 </head>
 <body class="light">
     <!-- Header -->
-    <header class="header">
+    <header class="header" aria-label="Main Navigation">
         <div class="container">
             <div class="logo">
+                <img src="images/logo.png" alt="Dr. P.I Skosana Logo" width="40" height="40" loading="lazy">
                 <h1 class="font-playfair">Dr. P.I Skosana</h1>
                 <p class="tagline">Dental Excellence</p>
             </div>
-            <nav class="desktop-nav">
+            <nav class="desktop-nav" aria-label="Site Navigation">
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -26,12 +49,12 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <div class="mobile-menu-toggle" onclick="toggleMenu()">&#9776;</div>
+            <button class="mobile-menu-toggle" onclick="toggleMenu()" role="button" aria-expanded="false" aria-label="Toggle Menu">&#9776;</button>
         </div>
     </header>
 
     <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
@@ -41,127 +64,52 @@
         <a href="contact.html">Contact</a>
     </div>
 
-    <!-- Page Header -->
-    <section class="page-header bg-brand-primary py-16">
-        <div class="container text-center">
-            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">About Us</h1>
-            <p class="text-white/80 max-w-3xl mx-auto">
-                Meet Dr. P.I. Skosana and learn about our commitment to providing exceptional dental care.
-            </p>
-        </div>
-    </section>
-
-    <!-- About Dr. Skosana Section -->
-    <section class="py-16 bg-white">
-        <div class="container">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <!-- Image Placeholder -->
-                <div>
-                    <div class="h-96 bg-gray-200 rounded-lg relative">
-                        <div class="absolute inset-0 flex items-center justify-center text-gray-500">
-                            Doctor Profile Image
-                        </div>
-                    </div>
-                </div>
-                <!-- Bio -->
-                <div>
-                    <h2 class="text-3xl font-bold text-brand-primary mb-6">Dr. P.I. Skosana</h2>
-                    <p class="text-gray-600 font-medium">Practice # 0157465 | HPC SA Nr.0082 325</p>
-                    <p class="text-gray-600 mb-4">BDS (MEDUNSA) | Dip Ortho (UWC)</p>
-                    <p class="text-gray-600 mb-4">
-                        After completing his dental education and training, Dr. Skosana has dedicated his career to providing exceptional dental care for patients of all ages. With a passion for creating beautiful smiles, he continuously expands his knowledge and skills through advanced courses in various dental specialties.
-                    </p>
-                    <p class="text-gray-600 mb-4">
-                        Dr. Skosana has attended extensive training in the latest dental techniques and technologies, including Zoom Teeth Whitening, Myobrace, CAD/CAM dentistry, and other advanced procedures. This commitment to continuing education ensures that his patients receive the most up-to-date and effective treatments available.
-                    </p>
-                    <p class="text-gray-600 mb-8">
-                        With a gentle approach and dedication to patient comfort, Dr. Skosana creates a welcoming environment where patients can feel at ease. He believes in taking the time to understand each patient's unique needs and concerns, developing personalized treatment plans that deliver optimal results.
-                    </p>
-                    <div class="italic text-brand-primary mb-8">
-                        "Your smile is our passion - The prettiest thing you can wear is your smile."
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Our Vision & Mission -->
-    <section class="py-16 bg-brand-light">
-        <div class="container">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-brand-primary mb-4">Our Vision & Mission</h2>
-                <p class="text-gray-600 max-w-3xl mx-auto">
-                    At Dental Excellence, we are committed to providing the highest quality dental care in a comfortable, welcoming environment.
+    <!-- Hero Section -->
+    <section class="hero banner-with-bg py-24" style="background-image: url('https://via.placeholder.com/1920x500');">
+        <div class="banner-overlay"></div>
+        <div class="container flex flex-col md:flex-row items-center justify-between text-center md:text-left">
+            <div>
+                <h1 class="text-5xl font-bold text-white mb-4">Our Services</h1>
+                <p class="text-white/80 max-w-3xl mx-auto">
+                    Comprehensive dental care tailored to your needs.
                 </p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Vision -->
-                <div class="bg-white p-8 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold text-brand-primary mb-4">Our Vision</h3>
-                    <p class="text-gray-600 mb-4">
-                        To be the leading dental practice known for exceptional care, innovative treatments, and beautiful, healthy smiles. We envision a community where dental anxiety is replaced with confidence, and everyone has access to the dental care they deserve.
-                    </p>
-                </div>
-                <!-- Mission -->
-                <div class="bg-white p-8 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold text-brand-secondary mb-4">Our Mission</h3>
-                    <p class="text-gray-600">
-                        To deliver personalized, comprehensive dental care using the latest technologies and techniques, ensuring optimal oral health and beautiful smiles for all our patients. We are committed to continuous education and implementing advanced dental practices.
-                    </p>
-                </div>
+            <!-- Logo Placeholder -->
+            <div class="mt-6 md:mt-0">
+                <img src="https://via.placeholder.com/150" alt="Dr. P.I Skosana Dental Excellence Logo" class="w-36 h-auto">
             </div>
         </div>
     </section>
 
-    <!-- Our Locations -->
+    <!-- Services Section -->
     <section class="py-16 bg-white">
         <div class="container">
-            <h2 class="text-3xl font-bold text-brand-primary text-center mb-8">Our Locations</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Location 1 -->
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold text-brand-primary mb-2">Main Surgery</h3>
-                    <p class="text-gray-600">Office No 211 Upperground KaMkholo Building,<br>26 Brown St,<br>Mbombela, 1200</p>
-                    <p class="text-gray-600">WhatsApp: <a href="https://wa.me/27835406225" class="text-brand-primary font-semibold">083 540 6225</a></p>
-                    <p class="text-gray-600">Tel: <a href="tel:+27137522757" class="text-brand-primary font-semibold">013 752 2757</a></p>
-                    <p class="text-gray-600">Email: <a href="mailto:drpiskosana@gmail.com" class="text-brand-primary font-semibold">DRPISKOSANA@GMAIL.COM</a></p>
-                </div>
-                <!-- Location 2 -->
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold text-brand-primary mb-2">Kabokweni Branch</h3>
-                    <p class="text-gray-600">Shop 4 Kelly Complex,<br>Kabokweni Road,<br>Kabokweni, 1245,<br>Mbombela</p>
-                    <p class="text-gray-600">Tel: <a href="tel:+27137961691" class="text-brand-primary font-semibold">013 796 1691</a></p>
-                </div>
-                <!-- Location 3 -->
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold text-brand-primary mb-2">Msogwaba Branch</h3>
-                    <p class="text-gray-600">Qedusizi Medical Centre,<br>Msogwaba Main Road,<br>Msogwaba, Mbombela</p>
-                    <p class="text-gray-600">Phone: <a href="tel:+27814417053" class="text-brand-primary font-semibold">081 441 7053</a></p>
-                </div>
+            <div class="text-center mb-12">
+                <div class="uppercase text-sm tracking-wider font-montserrat text-brand-primary mb-2">Services</div>
+                <h2 class="text-3xl font-bold text-brand-primary mb-4">
+                    WHAT DENTAL EXCELLENCE CAN DO FOR YOU
+                </h2>
+                <p class="text-gray-600 max-w-3xl mx-auto font-montserrat">
+                    Using the most advanced digital technology and equipment, Dental Excellence aims to give service worth smiling about.
+                </p>
             </div>
-        </div>
-    </section>
-
-    <!-- Our Approach -->
-    <section class="py-16 bg-brand-light">
-        <div class="container">
-            <div class="text-center mb-8">
-                <h2 class="text-3xl font-bold text-brand-primary">Our Approach to Dental Care</h2>
-            </div>
-            <div class="space-y-6">
-                <div>
-                    <h3 class="text-xl font-bold text-brand-primary mb-2">Patient-Centered Focus</h3>
-                    <p class="text-gray-600">We prioritize personalized treatment for each patient.</p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold text-brand-primary mb-2">Advanced Technology</h3>
-                    <p class="text-gray-600">We use state-of-the-art dental technology for precision and comfort.</p>
-                </div>
-            </div>
-            <div class="mt-10 text-center">
-                <a href="contact.html">
-                    <button class="btn-primary">Schedule Your Visit</button>
+            <!-- Grid of Services -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Endodontics -->
+                <a href="endodontics.html" aria-label="Learn More About Endodontics">
+                    <div class="service-card rounded-lg overflow-hidden shadow-md">
+                        <div class="relative h-56">
+                            <img
+                                src="https://ext.same-assets.com/663227978/1088353602.jpeg"
+                                alt="Endodontics"
+                                class="w-full h-full object-cover"
+                                loading="lazy"
+                            />
+                            <div class="service-title">Endodontics</div>
+                        </div>
+                    </div>
                 </a>
+                <!-- Repeat for other services -->
             </div>
         </div>
     </section>
@@ -186,9 +134,9 @@
                 <div class="footer-column">
                     <h3>Contact</h3>
                     <p>Office No 211 Upperground KaMkholo Building,<br>26 Brown St,<br>Mbombela, 1200</p>
-                    <p>WhatsApp: <a href="https://wa.me/27835406225" class="text-white">083 540 6225</a></p>
-                    <p>Tel: <a href="tel:+27137522757" class="text-white">013 752 2757</a></p>
-                    <p>Email: <a href="mailto:drpiskosana@gmail.com" class="text-white">DRPISKOSANA@GMAIL.COM</a></p>
+                    <p>WhatsApp: <a href="https://wa.me/27835406225" class="text-white" aria-label="WhatsApp: 083 540 6225">083 540 6225</a></p>
+                    <p>Tel: <a href="tel:+27137522757" class="text-white" aria-label="Phone: 013 752 2757">013 752 2757</a></p>
+                    <p>Email: <a href="mailto:drpiskosana@gmail.com" class="text-white" aria-label="Email: DRPISKOSANA@GMAIL.COM">DRPISKOSANA@GMAIL.COM</a></p>
                 </div>
                 <div class="footer-column">
                     <h3>Quick Links</h3>

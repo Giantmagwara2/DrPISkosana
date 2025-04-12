@@ -34,6 +34,7 @@
     <header class="header" aria-label="Main Navigation">
         <div class="container">
             <div class="logo">
+                <img src="images/logo.png" alt="Dr. P.I Skosana Logo" width="40" height="40" loading="lazy">
                 <h1 class="font-playfair">Dr. P.I Skosana</h1>
                 <p class="tagline">Dental Excellence</p>
             </div>
@@ -48,7 +49,7 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <div class="mobile-menu-toggle" onclick="toggleMenu()" role="button" aria-expanded="false" aria-label="Toggle Menu">&#9776;</div>
+            <button class="mobile-menu-toggle" onclick="toggleMenu()" role="button" aria-expanded="false" aria-label="Toggle Menu">&#9776;</button>
         </div>
     </header>
 
@@ -66,14 +67,20 @@
     <!-- Hero Section -->
     <section class="hero banner-with-bg py-24">
         <div class="banner-overlay"></div>
-        <div class="container text-center">
-            <h1 class="text-5xl font-bold text-white mb-4">Welcome to Dr. P.I Skosana Dental Excellence</h1>
-            <p class="text-white/80 max-w-3xl mx-auto mb-8">
-                Providing personalized, high-quality dental care with state-of-the-art technology for a healthier, brighter smile.
-            </p>
-            <a href="contact.html">
-                <button class="btn-primary" aria-label="Book Your Appointment">Book Your Appointment</button>
-            </a>
+        <div class="container text-center md:text-left flex flex-col md:flex-row items-center justify-between">
+            <div>
+                <h1 class="text-5xl font-bold text-white mb-4">Welcome to Dr. P.I Skosana Dental Excellence</h1>
+                <p class="text-white/80 max-w-3xl mx-auto mb-8">
+                    Providing personalized, high-quality dental care with state-of-the-art technology for a healthier, brighter smile.
+                </p>
+                <a href="contact.html">
+                    <button class="btn-primary" aria-label="Book Your Appointment">Book Your Appointment</button>
+                </a>
+            </div>
+            <!-- Logo Placeholder -->
+            <div class="mt-6 md:mt-0">
+                <img src="https://via.placeholder.com/150" alt="Dr. P.I Skosana Dental Excellence Logo" class="w-36 h-auto">
+            </div>
         </div>
     </section>
 
@@ -105,62 +112,223 @@
                         </div>
                     </div>
                 </a>
-                <!-- Repeat for other services -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us -->
-    <section class="py-16 bg-brand-light">
-        <div class="container">
-            <div class="text-center mb-8">
-                <h2 class="text-3xl font-bold text-brand-primary">Why Choose Us?</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <h3 class="text-xl font-bold text-brand-primary mb-2">Experienced Team</h3>
-                    <p class="text-gray-600">Led by Dr. P.I Skosana, our team is dedicated to excellence.</p>
-                </div>
-                <!-- Repeat for other reasons -->
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Banner -->
-    <section class="cta-banner bg-brand-primary py-16">
-        <div class="container text-center">
-            <h2 class="text-3xl font-bold text-white mb-4">Ready to Transform Your Smile?</h2>
-            <p class="text-white/80 max-w-3xl mx-auto mb-8">
-                Contact us today to schedule your appointment and experience the highest standard of dental care.
-            </p>
-            <a href="contact.html">
-                <button class="btn-primary" aria-label="Get in Touch">Get in Touch</button>
-            </a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-columns">
-                <div class="footer-column">
-                    <h3>Contact</h3>
-                    <p>Office No 211 Upperground KaMkholo Building,<br>26 Brown St,<br>Mbombela, 1200</p>
-                    <p>WhatsApp: <a href="https://wa.me/27835406225" class="text-white" aria-label="WhatsApp: 083 540 6225">083 540 6225</a></p>
-                    <p>Tel: <a href="tel:+27137522757" class="text-white" aria-label="Phone: 013 752 2757">013 752 2757</a></p>
-                    <p>Email: <a href="mailto:drpiskosana@gmail.com" class="text-white" aria-label="Email: DRPISKOSANA@GMAIL.COM">DRPISKOSANA@GMAIL.COM</a></p>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+                <!-- Prosthodontics -->
+                <a href="prosthodontics.html" aria-label="Learn More About Prosthodontics">
+                    <div class="service-card rounded-lg overflow-hidden shadow-md">
+                        <div class="relative h-56">
+                            <img
+                                src="https://ext.same-assets.com/663227978/3110383078.jpeg"
+                                alt="Prosthodontics"
+                                class="w-full h-full object-cover"
+                                loading="lazy"
+                            />
+                            <div class="service-title">Prosthodontics</div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Paediatric Dentistry -->
+                <a href="paediatric-dentistry.html" aria-label="Learn More About Paediatric Dentistry">
+                    <div class="service-card rounded-lg overflow-hidden shadow-md">
+                        <div class="relative h-56">
+                            <img
+                                src="https://ext.same-assets.com/663227978/4160880848.jpeg"
+                                alt="Paediatric Dentistry"
+                                class="w-full h-full object-cover"
+                                loading="lazy"
+                            />
+                            <div class="service-title">Paediatric Dentistry</div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Cosmetic Dentistry -->
+                <a href="cosmetic-dentistry.html" aria-label="Learn More About Cosmetic Dentistry">
+                    <div class="service-card rounded-lg overflow-hidden shadow-md">
+                        <div class="relative h-56">
+                            <img
+                                src="https://ext.same-assets.com/663227978/713766770.jpeg"
+                                alt="Cosmetic Dentistry"
+                                class="w-full h-full object-cover"
+                                loading="lazy"
+                            />
+                            <div class="service-title">Cosmetic Dentistry</div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Orthodontics -->
+                <a href="orthodontics.html" aria-label="Learn More About Orthodontics">
+                    <div class="service-card rounded-lg overflow-hidden shadow-md">
+                        <div class="relative h-56">
+                            <img
+                                src="https://ext.same-assets.com/663227978/3696077145.jpeg"
+                                alt="Orthodontics"
+                                class="w-full h-full object-cover"
+                                loading="lazy"
+                            />
+                            <div class="service-title">Orthodontics</div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Preventative Dentistry -->
+                <a href="preventative-dentistry.html" aria-label="Learn More About Preventative Dentistry">
+                    <div class="service-card rounded-lg overflow-hidden shadow-md">
+                        <div class="relative h-56">
+                            <img
+                                src="https://ext.same-assets.com/663227978/3783852295.jpeg"
+                                alt="Preventative Dentistry"
+                                class="w-full h-full object-cover"
+                                loading="lazy"
+                            />
+                            <div class="service-title">Preventative Dentistry</div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Periodontics -->
+                <a href="periodontics.html" aria-label="Learn More About Periodontics">
+                    <div class="service-card rounded-lg overflow-hidden shadow-md">
+                        <div class="relative h-56">
+                            <img
+                                src="https://ext.same-assets.com/663227978/1644989503.jpeg"
+                                alt="Periodontics"
+                                class="w-full h-full object-cover"
+                                loading="lazy"
+                            />
+                            <div class="service-title">Periodontics</div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Sports Dentistry -->
+                <a href="sports-dentistry.html" aria-label="Learn More About Sports Dentistry">
+                    <div class="service-card rounded-lg overflow-hidden shadow-md">
+                        <div class="relative h-56">
+                            <img
+                                src="https://ext.same-assets.com/663227978/500898923.jpeg"
+                                alt="Sports Dentistry"
+                                class="w-full h-full object-cover"
+                                loading="lazy"
+                            />
+                            <div class="service-title">Sports Dentistry</div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Oral Surgery -->
+                <a href="oral-surgery.html" aria-label="Learn More About Oral Surgery">
+                    <div class="service-card rounded-lg overflow-hidden shadow-md">
+                        <div class="relative h-56">
+                            <img
+                                src="https://ext.same-assets.com/663227978/1351361799.jpeg"
+                                alt="Oral Surgery"
+                                class="w-full h-full object-cover"
+                                loading="lazy"
+                            />
+                            <div class="service-title">Oral Surgery</div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Dental Restorations -->
+                <a href="dental-restorations.html" aria-label="Learn More About Dental Restorations">
+                    <div class="service-card rounded-lg overflow-hidden shadow-md">
+                        <div class="relative h-56">
+                            <img
+                                src="https://ext.same-assets.com/663227978/1839654736.jpeg"
+                                alt="Dental Restorations"
+                                class="w-full h-full object-cover"
+                                loading="lazy"
+                            />
+                            <div class="service-title">Dental Restorations</div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Laser Dentistry -->
+                <a href="laser-dentistry.html" aria-label="Learn More About Laser Dentistry">
+                    <div class="service-card rounded-lg overflow-hidden shadow-md">
+                        <div class="relative h-56">
+                            <img="<section>
+="section="footer>
+<section="Section="section="section="footer="section="center="footer>
+=" section>
+footer="section="footer="Footer="section="footer>
+="section="="-section="section="footer="section="footer>
+="section="footer="footer>
+   ="section="footer>
+="center="footer="section="flex="section="footer="footer="section="footer="footer="footer="=">
+="section="-footer="   ="footer="section="footer="section="f>
+="section="footer="-footer="section="footer="section="text-center="section="footer="text-center="section="-"="section="text-center="footer>
+="footer="section="footer="Footer="Footer="text-center="section="ex="section="text-center="text="footer="footer>
+="text-left="root=" <div class="footer="text-center="footer="text-centered="text-left="text-right="text-center="footer="text-align="text>
+="text-center="="text-center="text-right="text-center="text-center="section="text>
+="text-left="text>
+="text-center="text-left="text-right="text-align="text-center="text-right="text-center="header="text-align="text-left="text-center="text-left="text-right="text-align="text-left="text-center="text-center="text-align="text-right="footer="text-right="text-left="text-right="text-align="text-right="text-right="text-left="text-left="text-center="text-right="text-left="text-right="text-left="text-left="text-center="textleft="text-right="text-align="text-right="text-center="text-align="text-align="text-center="text-right="text-align="text-right="text-align="text-left="text-center="text-align="textright="text-align="text-right="text-align="text-align="text-right="text-align="text-left="text-center="text-left="text-align="text-right="text-align="text-center="text-right="text-align="text-center="text-left="text-align="text-left="text>
+="text-align="text-left="text-align="text-right="text-align="text-center="text-right="text-align="5 center="text-align="text-align="text-align="text-left="text-left="text-align="text-left-section="text-align">
+text-center="text-align="text-center="text-align="text-align="text-right="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text text="text-center="text-align="textright="text-align="text-align="text-align="text-center="text-align="text-right="text-align="text-center="text-align="text-align="text-align="text-right="text-left="text-align="text-align="text-align="text-center="text="text-left="text-align="text-align="text-right="text-align="text-center="text-left="text-align="text-left>
+="text-center="text-align="text-left="text-align="text-align="text-align="text-right="text-align="text="text-first="text-right="text-align="text-left="text="text-align="text-align="text-righttext-align="text-align>
+="text="text-align="text="text-center="text="text-align="text-right="text-align="text="text-align="text-right="textalign="text>
+text="text-align="text-right="text-align="text-align="text-center="text="text-align="text>
+        <div>
+="text-center="text-align="text="text-align="text="text-align="text-align="text-right="text-align="text-align="text-align="text-right="text-align="text-center="text-align="text-align="text-right="text-align="text-align="text-right="text-align="text-left="text-align="text-align="text-right="text-align="text-align="text>
+="text-align="text-center="text-align="text-right="text-align="text-right="text-align="text-align="text-right="text-align="text-align="text="text-align="text align="text-align="text-align="text-align="text-align="text-align="text-align="text-left="text-align="text-right="text-align="text="text="text-align="text-align="text-right="text-align="text-align="textright-align="text-align="text-align="text-align="text-align="text="textAlign="text-align="text="text-align="text-align="text-align="text-align="text-align="text-right="text-align="text-align="text-right="text-align="text-left="text-align="text-align="text-align="text="text-align="text-right="text-align="textright="text-align="text="text-align="text-align="text-align="text-align="text-align="text="text-align="text-align="text-rightcenter="text-align="text-align="text-right="text-align="text-align="text-align="text-right="text-align="text-align="text-right="text-align="text-center="text-align="text-align="text-right="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-right="text-align="text-right="text-align="text-align="text-left>
+="text-align="text-align="text-align="text="text"text_align="text-right="text-align="text-center="text-align="text-right="text-align="text-align="text="text-left>
+text-align="text-align="text-align="text-align="text-align="text align-text-align="text-left="text-align="text-align="text="text-align="text-right="text-align="text-align="text-align="Logo-left="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-left="text-align="text-align="text-align="text-align="text-align="text-align="text-center="text-center="text-align="text-right="text-align="text-align="text-align="text-align="text-align="text-right="text-align="text-right="text-align="text-center="text-align="text-align="text-center="text-align="text-align="text-left="text-align="text-align="text-align="text-align="text="text-left="text-align="text-align="text-right="text-align="text="text-align="text-align="text-left="text="text-center="text-align="text-align="text-align="text-align="text-align="text="text-align="text-left="text-center="text-align="text-left="text-align="text-align="text-left="text-align="text-align="text-align="text-left="text-align="text left="text-align="text-align="text-align="text-center="text-align="text-align="text-align="text-center="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-right="text-align="text-align="text-right="text-align="text="text-left="text-align="text-right="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text align="text-align="text-align="text-align="text-align="text-align="text>
+="text-align="text-align="text-right="text-align="text-align="text>
+="text align="text-align="text-align="text-align="text-left="text-align="text-align="text-align="text-align="text-align="text-align="text-left="text-align="text>
+="text-align="text-align="text-center="text-align="text-align="text align="text-align="text-align="text-align="text-align="text-align="text="text-align="text align="text-align="text align="text-align="text-left>
+text-align="text-align="text="text-align="text-left="text-center="text-align="text-center="text-align="text-center="text-align="text-align="text-align="text-align="text-left="text-align="text-center="text-align="text-left="text-align="text-align="text-align="text-align="text-align="text-left="text-align="text-align="text-align="text-align="text-left="text-align="text-center="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-left="text-align="text-align="text-align="text-align="text-align="text-align="text-left="text-align="text-align="text-align="text-rightalign="text-align="text3>
+="text-align="text="text="text-align="text-align="text-align="text>
+="text-align="text-align="text-left-textdiv>
+="text-align="text-align="text>
+="text-align="text-align="text-left="text>
+text-align>
+text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-left="text-align="text-align="text align="text-align="text-align="text-align="text-align="text-align="text-right="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text>
+="text-align="text-align="text-align="text-align="text-align="text="text-align="text-center="text-align="text-align="text-align="text-left="text-align="text-align="text-align>
+text-align="text-right="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text="text-align="text-right="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-right="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text>
+="text-align="text-align="text-align="text-align="text-align="text-align="text-center="text-align="text="text-align="text-left="text align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-center="text-align="text-align="text-align="text-center="text-align="text-align="text-align="text-align="text-align="text-center="text-align="text-align="text-align="text-align="text-center="text-align="text-align="text-center="text-align="text-align="text-center="text-align="text-align="text-align="text-align="text-align="text-center="text-align="text-align="text="text="text-align="text-align="text-align="text-align="text-left="text-align="text-align="text-align="text-align="text-align="text-align="text>
+="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-center="text-align="text-align="text-align="text-align="text-align="text-align="text>
+">
+="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-center="text-align="text-align="text-align="text="text-align="text-align="text-align="text-align="text-align="text-align="text-center="text-align="text-center="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text="text-align="text-align="text-align="text-center="text-align="text-align="text-align="text-align="text-align="text="text-align="text-align="text="text-align="text-align="text="text-left="text-align="text-align="text-center="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-center="text-align="text-center="text-align="text-align="text-align="text-align="text-align="text-align="text-center="text-align="text-align="text align="text-align="text align="text-align="text-align="text-align="text-left="text-center="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-center="text-align="text-align="text-align="text-align="text-align="text-center="text-align="text-center="text-align="text-align="text-align="text-align="text-align="text-align="text="text-align="text-align="text-align="text-align="text-align="text-left="text-align="text-align="text-left="text-align="text-align="text-left="text-align="text-align="text-align="text-align="text-left="text-align="text="text align="text-left="text-align="text-align="text-center="text-align="text-align="text-align="text-align="text-align="text-center="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text="text-align="text-align="text-align="text-align="text-center="text-align="text-align="text-align="text-align="text align="text-align="text-center="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text="text-align="text-align="text="text-align="text-align="text="text-align="text-align="text align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-center="text-align="text">
+="text-align="text right="text-align="text-align="text-center="text-align="text-align="text-center="text-align="text-align="text-align="text-align="text-left>
+="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-right="text-align="text-align="text-align="textalign="text="text="text-align="text-align="text-align="html>
+text-align="text-align="text-left="text-align="text="text-align="text-align="text-center="text-align="text-align="text-align="text-center="text-align="text-center="text-align="text-align="text-align="text-align="text-align="text-align="text-center="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-center="text-align="text-align="text-align="text-align="text-align="text-align="text-center="text-align="text-align="text-align="text-align="text-align=" text-align="text-align="text-align="text-align="text-align="text-align="text-center="text-align="text-align="text-align="text-align="text-align="text-align="text-center="text-align="text-center="text="text-align="text-align="text="text-align="text-align="text-align="text-align="text-align="text-right="text-align="text-align="text-center="text-align="text-align="text-align="text-align="text-align="text="text-align="text-align="text-align="text-align="text-align="text-align="text-center="text-align="text-align="text-align="text-center="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-center="text-align="text-center="text-align="text-align="text-align="text-align="text-left="text="text-align="text>
+text-align="text-align="text="text-align="text-align="text-align="text-align="text-center="text-align="text-center="text-align="text-align="text-align="text="text-align="text-center="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-center="text>
+="text-align="text-center="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-center="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-center="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-center="text-align="text-align="text-align="text-left="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-center="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text="text-align="text="text-align="text-align="text-center="text-align="text-center="text-align="text">
+="text-align="text-align="text="text-align="text-left="text-align="text-align="text-align="text-align="text-center="text-align="text-align="text-align="text-align>
+text-align="text-align="text="text-align="text-align="text>
+="text-align="text-align="text-align="text-align="text-center="text-align="text-align="text-center="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-center="text-align="text-center="text-align="text-align="text-center="text-align="text-align="text-align="text-align="text="text-align="text-align="text>
+="text-align="text-align="text-align="text-align="text-align="text-align="text>
+="text-align="text-align="text-align="text-align="text-align="text-center="text-align="text-align="text-align="text-align="text-align="text-align="text-center="text-align="text-align="text-align="text-align="text-center="text-align="text-align="text-align="text-align="text">
+="text-align="text-align="text-align="text-center="text-align="text-align="text="text-align="text align="text-center="text-align="text-align="text-center="text-align="text-center="text-align="text-align="text-align="text-center="text-center>
+text align="text-align="text-center="text-align="text-align="text-align="text-center="text-align="text-align="text-align="text-align="text-center="text-align="text-center="text-align="text-align="text-center="text-align="text-center="text-align="text-align="text align="text-align="text-center="text-align="text-align="text>
+text="text="text="text-align="text-align="text">
+ text-align="text="text-align="text-center="text-align="text-align="text>
+text="text-align="text-align="text-align="text-align="text-center="text-align="text-left="text-align="text-center="text-align="text-align="text-align="text-align="text-left="text-align="text>
+="text-align="text-center="text-align="text-align="text-align="text-align="text-align="text-right>
+text-align="text.center="text-align="text-center="text-align="text-center="text-align="text-align="text-align="text="text-align="text-center="text-align="text-center="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text right="text-align="text-align="text-align="text-align="text-align="text-right="text-align="text-align="text-center="text-align="text-align="text-align>
+text-align="text-left>
+="text-align="text-align="text-align="text-center="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align>
+text-align="text-align="text-align="text-align="text-align="text-align="text-right>
+text-align="text-align="text-caption="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text>
+text-align="text-align="text-align="text-center="text-align="text-align="text-align="text>
+text>
+align="text-align="text-align="text-align="text-align="text-align="text-center="text-align="text-align="text-align="text-center="text-align="text-align="text-align>
+text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text>
+text-align="text-align="text-align="text-align="text">
+="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text align="text-align="text align="text-align="text-align="text-align="text-align="text-align="text align="text="text-align="text-align="text-align="text>
+text-align="text-align="text-align="text-align="text>
+text="text align="text-align="text-align="text="text>
+text="text-align="text-align="text-align="text-align="text">
+="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-right="text-align="text-left="text="text align="text-align="text-align="text-align="text-align="text-align="text="text-align="text-align="text-align="text-align="text-center="text-align="text-align="text align="text-align="text-align="text-align="text-align="text>
+="text-align="text-align="text="text="text-align="text-align="text-center="text-align="text-align="text-align="text-center="text-align="text-align="text>
+text-align="textalign="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-center="text-align="text-align="text-align="text>
+text-align="text-align="text-center="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text>
+="text-align="text-align="text-center="text>
+text align="text>
+="text-align="text="text-align="text>
+text-align="text">
+="text-align="text="text-align="text:center="text-align="text-align="text-align="text-align="text align="text="text-align="text">
+="text-align="text-align="text>
+="text-align="text align="text-center="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text="text align="text-left="text-align="text-align="text-align="text align="text-align="text="text="text-align="textcenter="text-align="text="text-align="text-align="text-align="text-left="text-align="text-align="text-align="text-align="text-align="text="text-align="text-align="text-align="text-align="text-align="text>
+="text-align="text-align="text-center="text-align="text-align="text-align="text-align="text-left="text="text-align="text>
+text-align="text-align="text-align="text-align="text-align="text-align="text align="text-align="text-align="text-align="text-left="text-align="text>
+text-align="text-align="text-align="text-align="text-align="text"text-center="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-center="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text>
+text-align="text">
+="text-align="text="text-align="text-align="text-align="text-align="text>
+="text-align="text-align="text-align="text>
+text-align="text-align="text-left="text-align="text-center="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text-align="text

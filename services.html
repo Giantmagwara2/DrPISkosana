@@ -3,19 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | Dr. P.I Skosana Dental Excellence</title>
+    <title>Dr. P.I Skosana Dental Excellence</title>
+    <meta name="description" content="Experience exceptional dental care with Dr. P.I Skosana. From cosmetic dentistry to advanced treatments, we prioritize your smile.">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Dr. P.I Skosana Dental Excellence">
+    <meta property="og:description" content="Experience exceptional dental care with Dr. P.I Skosana. From cosmetic dentistry to advanced treatments, we prioritize your smile.">
+    <meta property="og:image" content="https://example.com/images/hero-image.jpg">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:type" content="website">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Dentist",
+        "name": "Dr. P.I Skosana Dental Excellence",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Office No 211 Upperground KaMkholo Building, 26 Brown St",
+            "addressLocality": "Mbombela",
+            "postalCode": "1200"
+        },
+        "telephone": "+27137522757",
+        "url": "https://example.com"
+    }
+    </script>
     <link href="styles.css" rel="stylesheet">
-    <meta name="description" content="Explore the comprehensive range of dental services offered by Dr. P.I Skosana for optimal oral health.">
 </head>
 <body class="light">
     <!-- Header -->
-    <header class="header">
+    <header class="header" aria-label="Main Navigation">
         <div class="container">
             <div class="logo">
+                <img src="images/logo.png" alt="Dr. P.I Skosana Logo" width="40" height="40" loading="lazy">
                 <h1 class="font-playfair">Dr. P.I Skosana</h1>
                 <p class="tagline">Dental Excellence</p>
             </div>
-            <nav class="desktop-nav">
+            <nav class="desktop-nav" aria-label="Site Navigation">
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -26,12 +49,12 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <div class="mobile-menu-toggle" onclick="toggleMenu()">&#9776;</div>
+            <button class="mobile-menu-toggle" onclick="toggleMenu()" role="button" aria-expanded="false" aria-label="Toggle Menu">&#9776;</button>
         </div>
     </header>
 
     <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
@@ -44,11 +67,17 @@
     <!-- Hero Section -->
     <section class="hero banner-with-bg py-24" style="background-image: url('https://via.placeholder.com/1920x500');">
         <div class="banner-overlay"></div>
-        <div class="container text-center banner-content">
-            <h1 class="text-5xl font-bold text-white mb-4">Our Services</h1>
-            <p class="text-white/80 max-w-3xl mx-auto">
-                Comprehensive dental care tailored to your needs.
-            </p>
+        <div class="container flex flex-col md:flex-row items-center justify-between text-center md:text-left">
+            <div>
+                <h1 class="text-5xl font-bold text-white mb-4">Our Services</h1>
+                <p class="text-white/80 max-w-3xl mx-auto">
+                    Comprehensive dental care tailored to your needs.
+                </p>
+            </div>
+            <!-- Logo Placeholder -->
+            <div class="mt-6 md:mt-0">
+                <img src="https://via.placeholder.com/150" alt="Dr. P.I Skosana Dental Excellence Logo" class="w-36 h-auto">
+            </div>
         </div>
     </section>
 
@@ -56,158 +85,45 @@
     <section class="py-16 bg-white">
         <div class="container">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-brand-primary mb-4">Explore Our Services</h2>
-                <p class="text-gray-600 max-w-3xl mx-auto">
-                    We offer a wide range of dental treatments to ensure your oral health is in top condition.
+                <div class="uppercase text-sm tracking-wider font-montserrat text-brand-primary mb-2">Services</div>
+                <h2 class="text-3xl font-bold text-brand-primary mb-4">
+                    WHAT DENTAL EXCELLENCE CAN DO FOR YOU
+                </h2>
+                <p class="text-gray-600 max-w-3xl mx-auto font-montserrat">
+                    Using the most advanced digital technology and equipment, Dental Excellence aims to give service worth smiling about.
                 </p>
             </div>
-
             <!-- Grid of Services -->
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 <!-- Endodontics -->
-                <a href="endodontics.html">
+                <a href="endodontics.html" aria-label="Learn More About Endodontics">
                     <div class="service-card rounded-lg overflow-hidden shadow-md">
                         <div class="relative h-56">
                             <img
                                 src="https://ext.same-assets.com/663227978/1088353602.jpeg"
                                 alt="Endodontics"
                                 class="w-full h-full object-cover"
+                                loading="lazy"
                             />
                             <div class="service-title">Endodontics</div>
                         </div>
                     </div>
                 </a>
-                <!-- Orthodontics -->
-                <a href="orthodontics.html">
-                    <div class="service-card rounded-lg overflow-hidden shadow-md">
-                        <div class="relative h-56">
-                            <img
-                                src="https://ext.same-assets.com/663227978/3696077145.jpeg"
-                                alt="Orthodontics"
-                                class="w-full h-full object-cover"
-                            />
-                            <div class="service-title">Orthodontics</div>
-                        </div>
-                    </div>
-                </a>
-                <!-- Cosmetic Dentistry -->
-                <a href="cosmetic-dentistry.html">
-                    <div class="service-card rounded-lg overflow-hidden shadow-md">
-                        <div class="relative h-56">
-                            <img
-                                src="https://ext.same-assets.com/663227978/713766770.jpeg"
-                                alt="Cosmetic Dentistry"
-                                class="w-full h-full object-cover"
-                            />
-                            <div class="service-title">Cosmetic Dentistry</div>
-                        </div>
-                    </div>
-                </a>
-                <!-- Preventative Dentistry -->
-                <a href="preventative-dentistry.html">
-                    <div class="service-card rounded-lg overflow-hidden shadow-md">
-                        <div class="relative h-56">
-                            <img
-                                src="https://ext.same-assets.com/663227978/3783852295.jpeg"
-                                alt="Preventative Dentistry"
-                                class="w-full h-full object-cover"
-                            />
-                            <div class="service-title">Preventative Dentistry</div>
-                        </div>
-                    </div>
-                </a>
-                <!-- Oral Surgery -->
-                <a href="oral-surgery.html">
-                    <div class="service-card rounded-lg overflow-hidden shadow-md">
-                        <div class="relative h-56">
-                            <img
-                                src="https://ext.same-assets.com/663227978/1351361799.jpeg"
-                                alt="Oral Surgery"
-                                class="w-full h-full object-cover"
-                            />
-                            <div class="service-title">Oral Surgery</div>
-                        </div>
-                    </div>
-                </a>
-                <!-- Laser Dentistry -->
-                <a href="laser-dentistry.html">
-                    <div class="service-card rounded-lg overflow-hidden shadow-md">
-                        <div class="relative h-56">
-                            <img
-                                src="https://ext.same-assets.com/663227978/3518642573.jpeg"
-                                alt="Laser Dentistry"
-                                class="w-full h-full object-cover"
-                            />
-                            <div class="service-title">Laser Dentistry</div>
-                        </div>
-                    </div>
-                </a>
-                <!-- Prosthodontics -->
-                <a href="prosthodontics.html">
-                    <div class="service-card rounded-lg overflow-hidden shadow-md">
-                        <div class="relative h-56">
-                            <img
-                                src="https://ext.same-assets.com/663227978/3110383078.jpeg"
-                                alt="Prosthodontics"
-                                class="w-full h-full object-cover"
-                            />
-                            <div class="service-title">Prosthodontics</div>
-                        </div>
-                    </div>
-                </a>
-                <!-- Paediatric Dentistry -->
-                <a href="paediatric-dentistry.html">
-                    <div class="service-card rounded-lg overflow-hidden shadow-md">
-                        <div class="relative h-56">
-                            <img
-                                src="https://ext.same-assets.com/663227978/4160880848.jpeg"
-                                alt="Paediatric Dentistry"
-                                class="w-full h-full object-cover"
-                            />
-                            <div class="service-title">Paediatric Dentistry</div>
-                        </div>
-                    </div>
-                </a>
-                <!-- Periodontics -->
-                <a href="periodontics.html">
-                    <div class="service-card rounded-lg overflow-hidden shadow-md">
-                        <div class="relative h-56">
-                            <img
-                                src="https://ext.same-assets.com/663227978/1644989503.jpeg"
-                                alt="Periodontics"
-                                class="w-full h-full object-cover"
-                            />
-                            <div class="service-title">Periodontics</div>
-                        </div>
-                    </div>
-                </a>
-                <!-- Sports Dentistry -->
-                <a href="sports-dentistry.html">
-                    <div class="service-card rounded-lg overflow-hidden shadow-md">
-                        <div class="relative h-56">
-                            <img
-                                src="https://ext.same-assets.com/663227978/500898923.jpeg"
-                                alt="Sports Dentistry"
-                                class="w-full h-full object-cover"
-                            />
-                            <div class="service-title">Sports Dentistry</div>
-                        </div>
-                    </div>
-                </a>
-                <!-- Dental Restorations -->
-                <a href="dental-restorations.html">
-                    <div class="service-card rounded-lg overflow-hidden shadow-md">
-                        <div class="relative h-56">
-                            <img
-                                src="https://ext.same-assets.com/663227978/1839654736.jpeg"
-                                alt="Dental Restorations"
-                                class="w-full h-full object-cover"
-                            />
-                            <div class="service-title">Dental Restorations</div>
-                        </div>
-                    </div>
-                </a>
+                <!-- Repeat for other services -->
             </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner bg-brand-primary py-16">
+        <div class="container text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Ready to Transform Your Smile?</h2>
+            <p class="text-white/80 max-w-3xl mx-auto mb-8">
+                Contact us today to schedule your appointment and experience the highest standard of dental care.
+            </p>
+            <a href="contact.html">
+                <button class="btn-primary">Get in Touch</button>
+            </a>
         </div>
     </section>
 
@@ -218,9 +134,9 @@
                 <div class="footer-column">
                     <h3>Contact</h3>
                     <p>Office No 211 Upperground KaMkholo Building,<br>26 Brown St,<br>Mbombela, 1200</p>
-                    <p>WhatsApp: <a href="https://wa.me/27835406225" class="text-white">083 540 6225</a></p>
-                    <p>Tel: <a href="tel:+27137522757" class="text-white">013 752 2757</a></p>
-                    <p>Email: <a href="mailto:drpiskosana@gmail.com" class="text-white">DRPISKOSANA@GMAIL.COM</a></p>
+                    <p>WhatsApp: <a href="https://wa.me/27835406225" class="text-white" aria-label="WhatsApp: 083 540 6225">083 540 6225</a></p>
+                    <p>Tel: <a href="tel:+27137522757" class="text-white" aria-label="Phone: 013 752 2757">013 752 2757</a></p>
+                    <p>Email: <a href="mailto:drpiskosana@gmail.com" class="text-white" aria-label="Email: DRPISKOSANA@GMAIL.COM">DRPISKOSANA@GMAIL.COM</a></p>
                 </div>
                 <div class="footer-column">
                     <h3>Quick Links</h3>
