@@ -1,11 +1,10 @@
 /* Base Variables */
 :root {
-    --brand-primary: #1a1a1a; /* Dark primary color */
-    --brand-secondary: #f5f5f5; /* Light secondary color */
-    --brand-light: #ffffff; /* White background */
-    --brand-dark: #333333; /* Dark text */
-    --accent: #2563eb; /* Primary accent (blue) */
-    --accent-hover: #1e40af; /* Accent hover (darker blue) */
+    --brand-primary: #145DA0; /* Deep Blue */
+    --brand-secondary: #0C2D48; /* Navy Blue */
+    --brand-accent: #2E8BC0; /* Light Blue */
+    --brand-light: #F0F8FF; /* Soft white-blue background */
+    --brand-neutral: #333333; /* Neutral text */
     --success: #16a34a; /* Success green */
     --warning: #ea580c; /* Warning orange */
     --error: #dc2626; /* Error red */
@@ -77,7 +76,7 @@ body {
 }
 
 .nav-links a:hover {
-    color: var(--accent);
+    color: var(--brand-accent);
 }
 
 .mobile-menu-toggle {
@@ -127,7 +126,7 @@ body {
 
 /* Buttons */
 .btn-primary {
-    background: var(--accent);
+    background: var(--brand-accent);
     color: white;
     padding: 0.75rem 1.5rem;
     border: none;
@@ -140,7 +139,7 @@ body {
 }
 
 .btn-primary:hover {
-    background: var(--accent-hover);
+    background: var(--brand-secondary);
     transform: scale(1.05);
 }
 
@@ -246,7 +245,7 @@ body {
 
 .input-field:focus,
 .textarea-field:focus {
-    border-color: var(--accent);
+    border-color: var(--brand-accent);
     outline: none;
 }
 
@@ -288,7 +287,7 @@ body {
 }
 
 .footer-column ul li a:hover {
-    color: var(--accent);
+    color: var(--brand-accent);
 }
 
 /* Responsive Styles */
