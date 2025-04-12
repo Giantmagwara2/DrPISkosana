@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Dr. P.I Skosana Dental Excellence</title>
+    <link href="styles.css" rel="stylesheet">
+    <meta name="description" content="Get in touch with Dr. P.I Skosana Dental Excellence. We’re here to answer your questions and schedule your appointment.">
+</head>
+<body class="light">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1 class="font-playfair">Dr. P.I Skosana</h1>
+                <p class="tagline">Dental Excellence</p>
+            </div>
+            <nav class="desktop-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="technology.html">Technology</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Contact Content -->
+    <section class="py-16 bg-brand-light">
+        <div class="container">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-brand-primary">Contact Us</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    We’re here to answer your questions and help you schedule an appointment. Reach out to us today!
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Contact Form -->
+                <div>
+                    <form action="#" method="POST" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-600 font-medium mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" class="input-field w-full" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-600 font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" class="input-field w-full" required>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-600 font-medium mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="input-field w-full" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-600 font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" class="textarea-field w-full" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full">Send Message</button>
+                    </form>
+                </div>
+                <!-- Contact Details -->
+                <div>
+                    <h3 class="text-2xl font-bold text-brand-primary mb-4">Our Locations</h3>
+                    <div class="space-y-6">
+                        <!-- Location 1 -->
+                        <div>
+                            <h4 class="text-xl font-bold text-brand-primary mb-2">Main Surgery</h4>
+                            <p class="text-gray-600">Office No 211 Upperground KaMkholo Building,<br>26 Brown St,<br>Mbombela, 1200</p>
+                            <p class="text-gray-600">WhatsApp: <a href="https://wa.me/27835406225" class="text-brand-primary font-semibold">083 540 6225</a></p>
+                            <p class="text-gray-600">Tel: <a href="tel:+27137522757" class="text-brand-primary font-semibold">013 752 2757</a></p>
+                            <p class="text-gray-600">Email: <a href="mailto:drpiskosana@gmail.com" class="text-brand-primary font-semibold">DRPISKOSANA@GMAIL.COM</a></p>
+                        </div>
+                        <!-- Location 2 -->
+                        <div>
+                            <h4 class="text-xl font-bold text-brand-primary mb-2">Kabokweni Branch</h4>
+                            <p class="text-gray-600">Shop 4 Kelly Complex,<br>Kabokweni Road,<br>Kabokweni, 1245,<br>Mbombela</p>
+                            <p class="text-gray-600">Tel: <a href="tel:+27137961691" class="text-brand-primary font-semibold">013 796 1691</a></p>
+                        </div>
+                        <!-- Location 3 -->
+                        <div>
+                            <h4 class="text-xl font-bold text-brand-primary mb-2">Msogwaba Branch</h4>
+                            <p class="text-gray-600">Qedusizi Medical Centre,<br>Msogwaba Main Road,<br>Msogwaba, Mbombela</p>
+                            <p class="text-gray-600">Phone: <a href="tel:+27814417053" class="text-brand-primary font-semibold">081 441 7053</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <p>Office No 211 Upperground KaMkholo Building,<br>26 Brown St,<br>Mbombela, 1200</p>
+                    <p>WhatsApp: <a href="https://wa.me/27835406225" class="text-white">083 540 6225</a></p>
+                    <p>Tel: <a href="tel:+27137522757" class="text-white">013 752 2757</a></p>
+                    <p>Email: <a href="mailto:drpiskosana@gmail.com" class="text-white">DRPISKOSANA@GMAIL.COM</a></p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

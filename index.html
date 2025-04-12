@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. P.I Skosana Dental Excellence</title>
+    <link href="styles.css" rel="stylesheet">
+    <meta name="description" content="Experience exceptional dental care with Dr. P.I Skosana. From cosmetic dentistry to advanced treatments, we prioritize your smile.">
+</head>
+<body class="light">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1 class="font-playfair">Dr. P.I Skosana</h1>
+                <p class="tagline">Dental Excellence</p>
+            </div>
+            <nav class="desktop-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="technology.html">Technology</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero banner-with-bg py-24">
+        <div class="banner-overlay"></div>
+        <div class="container text-center">
+            <h1 class="text-5xl font-bold text-white mb-4">Welcome to Dr. P.I Skosana Dental Excellence</h1>
+            <p class="text-white/80 max-w-3xl mx-auto mb-8">
+                Providing personalized, high-quality dental care with state-of-the-art technology for a healthier, brighter smile.
+            </p>
+            <a href="contact.html">
+                <button class="btn-primary">Book Your Appointment</button>
+            </a>
+        </div>
+    </section>
+
+    <!-- Featured Services -->
+    <section class="py-16 bg-brand-light">
+        <div class="container">
+            <h2 class="text-3xl font-bold text-brand-primary text-center mb-8">Our Featured Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white p-6 rounded-lg shadow-md transition-transform hover:scale-105">
+                    <h3 class="text-xl font-bold text-brand-primary mb-4">Cosmetic Dentistry</h3>
+                    <p class="text-gray-600 mb-4">
+                        Enhance your smile with teeth whitening, veneers, and more.
+                    </p>
+                    <a href="cosmetic-dentistry.html" class="text-brand-primary font-semibold">Learn More</a>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-card bg-white p-6 rounded-lg shadow-md transition-transform hover:scale-105">
+                    <h3 class="text-xl font-bold text-brand-primary mb-4">Orthodontics</h3>
+                    <p class="text-gray-600 mb-4">
+                        Straighten your teeth with braces or clear aligners.
+                    </p>
+                    <a href="orthodontics.html" class="text-brand-primary font-semibold">Learn More</a>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-card bg-white p-6 rounded-lg shadow-md transition-transform hover:scale-105">
+                    <h3 class="text-xl font-bold text-brand-primary mb-4">Preventative Care</h3>
+                    <p class="text-gray-600 mb-4">
+                        Maintain oral health with regular check-ups and cleanings.
+                    </p>
+                    <a href="preventative-dentistry.html" class="text-brand-primary font-semibold">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-16 bg-white">
+        <div class="container">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-brand-primary">Why Choose Us?</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <h3 class="text-xl font-bold text-brand-primary mb-2">Experienced Team</h3>
+                    <p class="text-gray-600">Led by Dr. P.I Skosana, our team is dedicated to excellence.</p>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-xl font-bold text-brand-primary mb-2">Advanced Technology</h3>
+                    <p class="text-gray-600">We use cutting-edge tools for precision and comfort.</p>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-xl font-bold text-brand-primary mb-2">Personalized Care</h3>
+                    <p class="text-gray-600">Tailored treatment plans to meet your unique needs.</p>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-xl font-bold text-brand-primary mb-2">Comfortable Environment</h3>
+                    <p class="text-gray-600">A welcoming space where patients feel at ease.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner bg-brand-primary py-16">
+        <div class="container text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Ready to Transform Your Smile?</h2>
+            <p class="text-white/80 max-w-3xl mx-auto mb-8">
+                Contact us today to schedule your appointment and experience the highest standard of dental care.
+            </p>
+            <a href="contact.html">
+                <button class="btn-primary">Get in Touch</button>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <p>Office No 211 Upperground KaMkholo Building,<br>26 Brown St,<br>Mbombela, 1200</p>
+                    <p>WhatsApp: <a href="https://wa.me/27835406225" class="text-white">083 540 6225</a></p>
+                    <p>Tel: <a href="tel:+27137522757" class="text-white">013 752 2757</a></p>
+                    <p>Email: <a href="mailto:drpiskosana@gmail.com" class="text-white">DRPISKOSANA@GMAIL.COM</a></p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
