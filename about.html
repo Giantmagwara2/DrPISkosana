@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. P.I Skosana Dental Care</title>
-    <meta name="description" content="Experience exceptional dental care with Dr. P.I Skosana. From cosmetic dentistry to advanced treatments, we prioritize your smile.">
+    <title>About Us | Dr. P.I Skosana Dental Care</title>
+    <meta name="description" content="Learn about Dr. P.I Skosana and our commitment to providing exceptional dental care with advanced technology and personalized treatment.">
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Dr. P.I Skosana Dental Care">
-    <meta property="og:description" content="Experience exceptional dental care with Dr. P.I Skosana. From cosmetic dentistry to advanced treatments, we prioritize your smile.">
-    <meta property="og:image" content="https://example.com/images/hero-image.jpg">
-    <meta property="og:url" content="https://example.com">
+    <meta property="og:title" content="About Us | Dr. P.I Skosana Dental Care">
+    <meta property="og:description" content="Learn about Dr. P.I Skosana and our commitment to providing exceptional dental care with advanced technology and personalized treatment.">
+    <meta property="og:image" content="https://example.com/images/about-hero.jpg">
+    <meta property="og:url" content="https://example.com/about.html">
     <meta property="og:type" content="website">
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -24,7 +24,7 @@
             "postalCode": "1200"
         },
         "telephone": "+27137522757",
-        "url": "https://example.com"
+        "url": "https://example.com/about.html"
     }
     </script>
     <link href="styles.css" rel="stylesheet">
@@ -69,9 +69,9 @@
         <div class="banner-overlay"></div>
         <div class="container flex flex-col md:flex-row items-center justify-between text-center md:text-left">
             <div>
-                <h1 class="text-5xl font-bold text-white mb-4">Our Services</h1>
+                <h1 class="text-5xl font-bold text-white mb-4">About Us</h1>
                 <p class="text-white/80 max-w-3xl mx-auto">
-                    Comprehensive dental care tailored to your needs.
+                    Meet Dr. P.I Skosana and learn about our commitment to providing exceptional dental care.
                 </p>
             </div>
             <!-- Logo Placeholder -->
@@ -81,35 +81,116 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- About Dr. Skosana Section -->
+    <section class="py-16 bg-brand-light">
+        <div class="container">
+            <div class="flex flex-col md:flex-row gap-8">
+                <div className="md:w-1/3">
+                    <div className="h-96 bg-gray-200 rounded-lg relative overflow-hidden">
+                        <img
+                            src="/images/dr-skosana-profile.jpg"
+                            alt="Dr. P. Skhosana Profile"
+                            className="w-full h-full object-cover"
+                            loading="lazy"
+                        />
+                    </div>
+                </div>
+                <div className="md:w-2/3">
+                    <h2 className="text-3xl font-bold text-brand-primary mb-6">
+                        Dr. P. Skhosana
+                    </h2>
+                    <p className="text-gray-600 font-medium mb-4">
+                        Practice # 0157465 | HPC SA Nr. 0082 325
+                    </p>
+                    <p className="text-gray-600 mb-4">
+                        BDS (MEDUNSA) | Dip Ortho (UWC)
+                    </p>
+                    <p className="text-gray-600 leading-relaxed mb-4">
+                        After completing her dental education and training, Dr. Skhosana has dedicated her career to providing exceptional dental care for patients of all ages. With a passion for creating beautiful smiles, she continuously expands her knowledge and skills through advanced courses in various dental specialties.
+                    </p>
+                    <p className="text-gray-600 leading-relaxed mb-4">
+                        Dr. Skhosana has attended extensive training in the latest dental techniques and technologies, including Zoom Teeth Whitening, Myobrace, CAD/CAM dentistry, and other advanced procedures. This commitment to continuing education ensures that her patients receive the most up-to-date and effective treatments available.
+                    </p>
+                    <p className="text-gray-600 mb-8">
+                        Your smile is our passion -{' '}
+                        <em className="smile-quote">The prettiest thing you can wear is your smile.</em>
+                    </p>
+                    <a href="/about">
+                        <button className="bg-brand-primary text-white hover:bg-brand-primary/90 uppercase font-montserrat tracking-wide">
+                            FIND OUT MORE
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Vision & Mission -->
     <section class="py-16 bg-white">
         <div class="container">
             <div class="text-center mb-12">
-                <div class="uppercase text-sm tracking-wider font-montserrat text-brand-primary mb-2">Services</div>
                 <h2 class="text-3xl font-bold text-brand-primary mb-4">
-                    WHAT Dental Care CAN DO FOR YOU
+                    Our Vision & Mission
                 </h2>
-                <p class="text-gray-600 max-w-3xl mx-auto font-montserrat">
-                    Using the most advanced digital technology and equipment, Dental Care aims to give service worth smiling about.
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    At Dental Excellence, we are committed to providing the highest quality dental care in a comfortable, welcoming environment.
                 </p>
             </div>
-            <!-- Grid of Services -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                <!-- Endodontics -->
-                <a href="endodontics.html" aria-label="Learn More About Endodontics">
-                    <div class="service-card rounded-lg overflow-hidden shadow-md">
-                        <div class="relative h-56">
-                            <img
-                                src="https://ext.same-assets.com/663227978/1088353602.jpeg"
-                                alt="Endodontics"
-                                class="w-full h-full object-cover"
-                                loading="lazy"
-                            />
-                            <div class="service-title">Endodontics</div>
-                        </div>
-                    </div>
-                </a>
-                <!-- Repeat for other services -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Vision -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-brand-primary mb-4">Our Vision</h3>
+                    <p class="text-gray-600">
+                        To be the leading dental practice known for exceptional care, innovative treatments, and beautiful, healthy smiles.
+                    </p>
+                </div>
+                <!-- Mission -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-brand-primary mb-4">Our Mission</h3>
+                    <p class="text-gray-600">
+                        To deliver personalized, comprehensive dental care using the latest technologies and techniques, ensuring optimal oral health and beautiful smiles for all our patients.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-16 bg-brand-secondary text-white">
+        <div class="container">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-4">
+                    Why Choose Us?
+                </h2>
+                <p class="text-white/80 max-w-3xl mx-auto">
+                    Discover what sets Dental Excellence apart from other dental practices.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <h3 class="text-xl font-bold text-white mb-2">Experienced Team</h3>
+                    <p class="text-white/80">
+                        Led by Dr. P. Skhosana, our team is dedicated to excellence and compassionate care.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-xl font-bold text-white mb-2">Advanced Technology</h3>
+                    <p class="text-white/80">
+                        We use cutting-edge tools for precision, comfort, and superior results.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-xl font-bold text-white mb-2">Personalized Care</h3>
+                    <p class="text-white/80">
+                        Tailored treatment plans to meet your unique needs and preferences.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-xl font-bold text-white mb-2">Comfortable Environment</h3>
+                    <p class="text-white/80">
+                        A welcoming space where patients feel relaxed and confident during their visits.
+                    </p>
+                </div>
             </div>
         </div>
     </section>

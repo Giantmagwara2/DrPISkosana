@@ -1,14 +1,14 @@
 /* Base Variables */
 :root {
-    --primary: #0A2540; /* Darker Blue - Trustworthy */
-    --secondary: #145DA0; /* Deep Blue - Professional */
-    --accent: #FFC107; /* Golden Yellow - Friendly and Visible */
-    --background: #F9FAFB; /* Soft white-blue background - Clean */
+    --primary: #007BFF; /* Brighter Blue - Trustworthy */
+    --secondary: #17A2B8; /* Teal Blue - Professional */
+    --accent: #FFD700; /* Gold - Friendly and Visible */
+    --background: #FFFFFF; /* Pure White - Clean */
     --text-primary: #333333; /* Primary text color */
     --text-secondary: #6b7280; /* Secondary text color */
-    --success: #16a34a; /* Success green */
-    --warning: #ea580c; /* Warning orange */
-    --error: #dc2626; /* Error red */
+    --success: #28A745; /* Success green */
+    --warning: #FFC107; /* Warning yellow */
+    --error: #DC3545; /* Error red */
     --border: #e5e7eb; /* Light border color */
     --radius: 0.75rem; /* Rounded corners */
     --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
@@ -56,12 +56,11 @@ body {
 .logo {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    position: relative; /* Allows logo adjustments */
+    gap: 1rem;
 }
 
 .logo img {
-    width: 120px; /* Enlarged logo */
+    width: 150px; /* Enlarged logo */
     height: auto;
     object-fit: contain;
     border-radius: var(--radius); /* Smooth edges */
@@ -70,18 +69,6 @@ body {
 
 .logo img:hover {
     transform: scale(1.1); /* Slight zoom on hover */
-}
-
-.logo h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    margin: 0;
-    letter-spacing: 1px;
-    display: none; /* Hide text for cleaner look */
-}
-
-.tagline {
-    display: none; /* Remove tagline for simplicity */
 }
 
 .nav-links {
@@ -150,12 +137,6 @@ body {
     text-align: center;
 }
 
-.hero .container.flex-row {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .hero h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
@@ -166,14 +147,9 @@ body {
     margin-bottom: 2rem;
 }
 
-.hero .logo-placeholder {
-    width: 150px;
-    height: auto;
-}
-
 /* Buttons */
 .btn-primary {
-    background: var(--accent);
+    background: var(--primary); /* Restored blue for buttons */
     color: white;
     padding: 0.75rem 1.5rem;
     border: none;
@@ -190,6 +166,38 @@ body {
 .btn-primary:focus-visible {
     background: var(--secondary);
     transform: scale(1.05);
+    box-shadow: var(--shadow-md);
+}
+
+/* About Us Section */
+.about-section {
+    background: var(--background);
+    padding: 4rem 0;
+    color: var(--text-primary);
+}
+
+.about-section .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.about-section .content {
+    flex: 1 1 50%;
+    max-width: 50%;
+}
+
+.about-section .image {
+    flex: 1 1 50%;
+    max-width: 50%;
+}
+
+.about-section img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    object-fit: cover;
     box-shadow: var(--shadow-md);
 }
 
@@ -242,30 +250,10 @@ body {
 .service-title {
     text-align: center;
     padding: 1.5rem;
-    background: var(--accent); /* Changed to accent color for visibility */
+    background: var(--primary); /* Changed to primary color for visibility */
     color: white;
     font-weight: bold;
     border-radius: var(--radius) var(--radius) 0 0;
-}
-
-/* Image Optimizations */
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-/* Icons */
-.icon {
-    width: 24px;
-    height: 24px;
-    fill: currentColor;
-    transition: fill 0.3s;
-}
-
-.icon:hover {
-    fill: var(--accent);
 }
 
 /* Footer */
@@ -337,5 +325,11 @@ img {
 
     .services-grid {
         grid-template-columns: 1fr;
+    }
+
+    .about-section .content,
+    .about-section .image {
+        flex: 1 1 100%;
+        max-width: 100%;
     }
 }
