@@ -3,7 +3,8 @@ function toggleMenu() {
     const mobileMenu = document.getElementById('mobileMenu');
     if (mobileMenu) {
         mobileMenu.classList.toggle('active');
-        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : ''; // Prevent scrolling when menu is open
+        // Prevent scrolling when the mobile menu is open
+        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
     }
 }
 
@@ -16,7 +17,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
         if (targetElement) {
             window.scrollTo({
-                top: targetElement.offsetTop - 80, // Adjust for fixed headers
+                top: targetElement.offsetTop - 80, // Adjust for fixed headers or navigation bars
                 behavior: 'smooth'
             });
         }
@@ -30,11 +31,13 @@ function validateForm(form) {
     const phone = form.querySelector('#phone')?.value.trim();
     const message = form.querySelector('#message')?.value.trim();
 
+    // Ensure all fields are filled
     if (!name || !email || !phone || !message) {
         alert('Please fill out all fields.');
         return false;
     }
 
+    // Validate email format
     if (!validateEmail(email)) {
         alert('Please enter a valid email address.');
         return false;
@@ -73,6 +76,9 @@ async function fetchTestimonials() {
                 `;
                 testimonialsContainer.insertAdjacentHTML('beforeend', testimonialHTML);
             });
+
+            // Reapply scroll animations after loading testimonials
+            applyScrollAnimations();
         }
     } catch (error) {
         console.error('Error fetching testimonials:', error);
@@ -81,7 +87,7 @@ async function fetchTestimonials() {
 
 fetchTestimonials();
 
-// Scroll Animation
+// Scroll Animation Observer
 const scrollObserver = new IntersectionObserver(
     (entries) => {
         entries.forEach(entry => {
@@ -91,13 +97,15 @@ const scrollObserver = new IntersectionObserver(
             }
         });
     },
-    { threshold: 0.1 }
+    { threshold: 0.1 } // Trigger when 10% of the element is visible
 );
 
-// Apply Observer to Elements
-document.querySelectorAll('.animate-on-scroll').forEach(element => {
-    scrollObserver.observe(element);
-});
+// Apply Scroll Animations to Elements
+function applyScrollAnimations() {
+    document.querySelectorAll('.animate-on-scroll').forEach(element => {
+        scrollObserver.observe(element);
+    });
+}
 
 // Lazy Load Images
 document.addEventListener("DOMContentLoaded", () => {
@@ -107,9 +115,9 @@ document.addEventListener("DOMContentLoaded", () => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const img = entry.target;
-                    img.src = img.dataset.src;
-                    img.onload = () => img.classList.add('loaded');
-                    observer.unobserve(img);
+                    img.src = img.dataset.src; // Set the actual image source
+                    img.onload = () => img.classList.add('loaded'); // Add a class when the image is fully loaded
+                    observer.unobserve(img); // Stop observing after loading
                 }
             });
         },
@@ -125,8 +133,18 @@ document.querySelectorAll('.btn-primary').forEach(button => {
         if (typeof gtag === 'function') {
             gtag('event', 'click', {
                 event_category: 'Button',
-                event_label: button.textContent
+                event_label: button.textContent.trim() // Use trimmed text for accurate tracking
             });
+        }
+    });
+});
+
+// Accessibility Enhancements
+document.querySelectorAll('button, a').forEach(element => {
+    element.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            element.click(); // Trigger click on Enter or Space key press for accessibility
         }
     });
 });

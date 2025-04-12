@@ -125,7 +125,6 @@ body {
 .hero {
     position: relative;
     padding: 4rem 0;
-    text-align: center;
     color: white;
     background: linear-gradient(to bottom, var(--primary), var(--accent));
     border-radius: var(--radius);
@@ -139,6 +138,19 @@ body {
     border-radius: var(--radius);
 }
 
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hero .container.flex-row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .hero h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
@@ -147,6 +159,11 @@ body {
 .hero p {
     font-size: 1.25rem;
     margin-bottom: 2rem;
+}
+
+.hero .logo-placeholder {
+    width: 150px;
+    height: auto;
 }
 
 /* Buttons */
@@ -185,8 +202,7 @@ body {
     box-shadow: var(--shadow-md);
 }
 
-.services-grid,
-.gallery-grid {
+.services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
@@ -312,5 +328,9 @@ img {
 
     .hero p {
         font-size: 1rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
     }
 }
