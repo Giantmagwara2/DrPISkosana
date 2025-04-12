@@ -1,204 +1,154 @@
-'use client';
-
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import CtaBanner from '@/components/CtaBanner';
-
-export default function AboutPage() {
-  return (
-    <>
-      {/* Page Header */}
-      <div className="bg-brand-primary py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            About Us
-          </h1>
-          <p className="text-white/80 max-w-3xl mx-auto">
-            Meet Dr. P. Skhosana and learn about our commitment to providing exceptional dental care.
-          </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. P.I Skosana Dental Care</title>
+    <meta name="description" content="Experience exceptional dental care with Dr. P.I Skosana. From cosmetic dentistry to advanced treatments, we prioritize your smile.">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Dr. P.I Skosana Dental Care">
+    <meta property="og:description" content="Experience exceptional dental care with Dr. P.I Skosana. From cosmetic dentistry to advanced treatments, we prioritize your smile.">
+    <meta property="og:image" content="https://example.com/images/hero-image.jpg">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:type" content="website">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Dentist",
+        "name": "Dr. P.I Skosana Dental Care",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Office No 211 Upperground KaMkholo Building, 26 Brown St",
+            "addressLocality": "Mbombela",
+            "postalCode": "1200"
+        },
+        "telephone": "+27137522757",
+        "url": "https://example.com"
+    }
+    </script>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="light">
+    <!-- Header -->
+    <header class="header" aria-label="Main Navigation">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="Dr. P.I Skosana Logo" width="40" height="40" loading="lazy">
+                <h1 class="font-playfair">Dr. P.I Skosana</h1>
+                <p class="tagline">Dental Care</p>
+            </div>
+            <nav class="desktop-nav" aria-label="Site Navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle" onclick="toggleMenu()" role="button" aria-expanded="false" aria-label="Toggle Menu">&#9776;</button>
         </div>
-      </div>
+    </header>
 
-      {/* Doctor Introduction Section */}
-      <div className="py-16 bg-brand-light">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row gap-8">
-            {/* Left Column: Image and Title */}
-            <div className="md:w-1/3">
-              <div className="heading-primary mb-2 uppercase text-sm tracking-wider font-montserrat">
-                Dental Excellence
-              </div>
-              <h2 className="text-3xl font-bold mb-6 text-brand-primary">
-                IS RUN BY DENTIST<br />DR P. SKHOSANA
-              </h2>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="technology.html">Technology</a>
+        <a href="contact.html">Contact</a>
+    </div>
 
-              <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="h-64 bg-gray-300 relative">
-                  <img
-                    src="/images/dr-skosana-profile.jpg"
-                    alt="Dr. P. Skhosana Profile"
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
+    <!-- Hero Section -->
+    <section class="hero banner-with-bg py-24" style="background-image: url('https://via.placeholder.com/1920x500');">
+        <div class="banner-overlay"></div>
+        <div class="container flex flex-col md:flex-row items-center justify-between text-center md:text-left">
+            <div>
+                <h1 class="text-5xl font-bold text-white mb-4">Our Services</h1>
+                <p class="text-white/80 max-w-3xl mx-auto">
+                    Comprehensive dental care tailored to your needs.
+                </p>
+            </div>
+            <!-- Logo Placeholder -->
+            <div class="mt-6 md:mt-0">
+                <img src="https://via.placeholder.com/150" alt="Dr. P.I Skosana Dental Care Logo" class="w-36 h-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 bg-white">
+        <div class="container">
+            <div class="text-center mb-12">
+                <div class="uppercase text-sm tracking-wider font-montserrat text-brand-primary mb-2">Services</div>
+                <h2 class="text-3xl font-bold text-brand-primary mb-4">
+                    WHAT Dental Care CAN DO FOR YOU
+                </h2>
+                <p class="text-gray-600 max-w-3xl mx-auto font-montserrat">
+                    Using the most advanced digital technology and equipment, Dental Care aims to give service worth smiling about.
+                </p>
+            </div>
+            <!-- Grid of Services -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Endodontics -->
+                <a href="endodontics.html" aria-label="Learn More About Endodontics">
+                    <div class="service-card rounded-lg overflow-hidden shadow-md">
+                        <div class="relative h-56">
+                            <img
+                                src="https://ext.same-assets.com/663227978/1088353602.jpeg"
+                                alt="Endodontics"
+                                class="w-full h-full object-cover"
+                                loading="lazy"
+                            />
+                            <div class="service-title">Endodontics</div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Repeat for other services -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner bg-brand-primary py-16">
+        <div class="container text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Ready to Transform Your Smile?</h2>
+            <p class="text-white/80 max-w-3xl mx-auto mb-8">
+                Contact us today to schedule your appointment and experience the highest standard of dental care.
+            </p>
+            <a href="contact.html">
+                <button class="btn-primary">Get in Touch</button>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <p>Office No 211 Upperground KaMkholo Building,<br>26 Brown St,<br>Mbombela, 1200</p>
+                    <p>WhatsApp: <a href="https://wa.me/27835406225" class="text-white" aria-label="WhatsApp: 083 540 6225">083 540 6225</a></p>
+                    <p>Tel: <a href="tel:+27137522757" class="text-white" aria-label="Phone: 013 752 2757">013 752 2757</a></p>
+                    <p>Email: <a href="mailto:drpiskosana@gmail.com" class="text-white" aria-label="Email: DRPISKOSANA@GMAIL.COM">DRPISKOSANA@GMAIL.COM</a></p>
                 </div>
-              </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
             </div>
-
-            {/* Right Column: Bio */}
-            <div className="md:w-2/3">
-              <p className="mb-6 text-gray-700 leading-relaxed">
-                With the <strong className="text-brand-primary">Dental Excellence</strong> practice situated in Pretoria, experienced dentist Dr. P. Skhosana offers the full range of dentistry services from restorations and oral surgery to orthodontics and cosmetic dentistry. Using the most advanced digital technology and equipment, Dental Excellence aims to give service worth smiling about.
-              </p>
-
-              <p className="mb-6 text-gray-700 leading-relaxed">
-                After completing her dental education and training, Dr. Skhosana has also attended various courses to better her skills and provide a wide range of services for her patients, including Zoom Teeth Whitening, Myobrace, CAD/CAM dentistry, and other advanced procedures. Using the latest digital dental technology together with the finest quality materials helps her fulfill her passion in delivering exceptional dental care.
-              </p>
-
-              <p className="mb-8 text-gray-700 leading-relaxed">
-                Your smile is our passion -{' '}
-                <em className="smile-quote">The prettiest thing you can wear is your smile.</em>
-              </p>
-
-              <Link href="/about">
-                <Button className="bg-brand-primary text-white hover:bg-brand-primary/90 uppercase font-montserrat tracking-wide">
-                  FIND OUT MORE
-                </Button>
-              </Link>
-            </div>
-          </div>
         </div>
-      </div>
+    </footer>
 
-      {/* Our Vision & Mission */}
-      <div className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-brand-primary mb-4">
-              Our Vision & Mission
-            </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              At Dental Excellence, we are committed to providing the highest quality dental care in a comfortable, welcoming environment.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Vision */}
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold text-brand-primary mb-4">Our Vision</h3>
-              <p className="text-gray-600 mb-4">
-                To be the leading dental practice known for exceptional care, innovative treatments, and beautiful, healthy smiles. We envision a community where dental anxiety is replaced with confidence, and everyone has access to the dental care they deserve.
-              </p>
-              <p className="text-gray-600">
-                We strive to create an environment where patients of all ages feel comfortable, respected, and valued, fostering long-term relationships built on trust and exceptional results.
-              </p>
-            </div>
-
-            {/* Mission */}
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold text-brand-secondary mb-4">Our Mission</h3>
-              <p className="text-gray-600 mb-4">
-                To deliver personalized, comprehensive dental care using the latest technologies and techniques, ensuring optimal oral health and beautiful smiles for all our patients. We are committed to continuous education and implementing advanced dental practices.
-              </p>
-              <p className="text-gray-600">
-                We aim to provide a positive dental experience that exceeds expectations, educating our patients about oral health while delivering treatments with compassion, integrity, and the highest standards of excellence.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Why Choose Us */}
-      <div className="py-16 bg-brand-secondary text-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Why Choose Us?
-            </h2>
-            <p className="text-white/80 max-w-3xl mx-auto">
-              Discover what sets Dental Excellence apart from other dental practices.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <h3 className="text-xl font-bold text-white mb-2">Experienced Team</h3>
-              <p className="text-white/80">
-                Led by Dr. P. Skhosana, our team is dedicated to excellence and compassionate care.
-              </p>
-            </div>
-            <div className="text-center">
-              <h3 className="text-xl font-bold text-white mb-2">Advanced Technology</h3>
-              <p className="text-white/80">
-                We use cutting-edge tools for precision, comfort, and superior results.
-              </p>
-            </div>
-            <div className="text-center">
-              <h3 className="text-xl font-bold text-white mb-2">Personalized Care</h3>
-              <p className="text-white/80">
-                Tailored treatment plans to meet your unique needs and preferences.
-              </p>
-            </div>
-            <div className="text-center">
-              <h3 className="text-xl font-bold text-white mb-2">Comfortable Environment</h3>
-              <p className="text-white/80">
-                A welcoming space where patients feel relaxed and confident during their visits.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Our Approach */}
-      <div className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-brand-primary mb-8 text-center">
-              Our Approach to Dental Care
-            </h2>
-
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-xl font-bold text-brand-primary mb-2">Patient-Centered Focus</h3>
-                <p className="text-gray-600">
-                  We place our patients at the center of everything we do. By listening carefully to your concerns and goals, we develop personalized treatment plans that address your specific needs and preferences.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-bold text-brand-primary mb-2">Comprehensive Care</h3>
-                <p className="text-gray-600">
-                  From preventive cleanings to advanced restorative and cosmetic treatments, we offer a wide range of services to meet all your dental needs under one roof. Our comprehensive approach ensures continuity of care and consistent results.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-bold text-brand-primary mb-2">Advanced Technology</h3>
-                <p className="text-gray-600">
-                  We invest in state-of-the-art dental technology to enhance diagnosis, improve treatment precision, and ensure your comfort. Digital imaging, laser treatments, and CAD/CAM technology are just some of the advanced tools we utilize.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-bold text-brand-primary mb-2">Gentle Touch</h3>
-                <p className="text-gray-600">
-                  We understand that dental visits can cause anxiety for many people. Our gentle approach, combined with amenities designed for your comfort, helps create a relaxing experience. We take the time to ensure you feel at ease throughout your visit.
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-10 text-center">
-              <Link href="/contact">
-                <Button className="bg-brand-primary text-white hover:bg-brand-primary/90">
-                  Schedule Your Visit
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Call to Action Banner */}
-      <CtaBanner />
-    </>
-  );
-}
+    <script src="script.js"></script>
+</body>
+</html>
