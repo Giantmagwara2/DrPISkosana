@@ -1,18 +1,18 @@
 /* Base Variables */
 :root {
-    --brand-primary: #145DA0; /* Deep Blue */
-    --brand-secondary: #0C2D48; /* Navy Blue */
-    --brand-accent: #2E8BC0; /* Light Blue */
-    --brand-light: #F0F8FF; /* Soft white-blue background */
-    --brand-neutral: #333333; /* Neutral text */
-    --success: #16a34a; /* Success green */
-    --warning: #ea580c; /* Warning orange */
-    --error: #dc2626; /* Error red */
-    --border: #e5e7eb; /* Light border color */
-    --radius: 0.5rem; /* Rounded corners */
+    --brand-primary: #145DA0; /* Deep Blue - Trustworthy */
+    --brand-secondary: #0C2D48; /* Navy Blue - Professional */
+    --brand-accent: #2E8BC0; /* Light Blue - Friendly */
+    --brand-light: #F0F8FF; /* Soft white-blue background - Clean */
+    --brand-neutral: #333333; /* Neutral text - Readable */
+    --success: #16a34a; /* Success green - Positive vibes */
+    --warning: #ea580c; /* Warning orange - Attention-grabbing */
+    --error: #dc2626; /* Error red - Alerts */
+    --border: #e5e7eb; /* Light border color - Subtle */
+    --radius: 1rem; /* Rounded corners - Friendlier */
     --foreground: #333333; /* Primary text color */
     --muted-foreground: #6b7280; /* Secondary text color */
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Default shadow */
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Softer shadow */
 }
 
 /* Global Styles */
@@ -46,18 +46,23 @@ body {
     background: var(--brand-primary);
     color: white;
     padding: 1rem 0;
+    border-bottom-left-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
 
 .logo h1 {
     font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
     margin: 0;
+    letter-spacing: 1px;
 }
 
 .tagline {
     font-size: 0.9rem;
     margin: 0;
     color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 0.5px;
 }
 
 .nav-links {
@@ -97,6 +102,7 @@ body {
     padding: 1rem;
     border-radius: var(--radius);
     z-index: 10;
+    box-shadow: var(--shadow);
 }
 
 /* Hero Section */
@@ -105,6 +111,9 @@ body {
     padding: 4rem 0;
     text-align: center;
     color: white;
+    background: linear-gradient(to bottom, var(--brand-primary), var(--brand-accent));
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
 
 .banner-with-bg {
@@ -116,7 +125,8 @@ body {
 .banner-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: var(--radius);
 }
 
 .banner-content {
@@ -136,11 +146,13 @@ body {
     transition: background 0.3s, transform 0.3s;
     text-decoration: none;
     display: inline-block;
+    box-shadow: var(--shadow);
 }
 
 .btn-primary:hover {
     background: var(--brand-secondary);
     transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Cards and Grids */
@@ -149,11 +161,12 @@ body {
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     padding: 1.5rem;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
-    transform: scale(1.02);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .services-grid,
@@ -171,12 +184,13 @@ body {
     border-radius: var(--radius);
     background: var(--brand-light);
     box-shadow: var(--shadow);
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .service-card:hover,
 .gallery-item:hover {
-    transform: scale(1.05);
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
 
 .service-title {
@@ -201,11 +215,12 @@ body {
     border-radius: var(--radius);
     padding: 1.5rem;
     box-shadow: var(--shadow);
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .testimonial:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .quote {
@@ -239,7 +254,7 @@ body {
     border: 1px solid var(--border);
     padding: 0.75rem;
     border-radius: var(--radius);
-    transition: border-color 0.3s;
+    transition: border-color 0.3s, box-shadow 0.3s;
     width: 100%;
 }
 
@@ -247,6 +262,7 @@ body {
 .textarea-field:focus {
     border-color: var(--brand-accent);
     outline: none;
+    box-shadow: 0 0 0 2px rgba(46, 139, 192, 0.2);
 }
 
 /* Footer */
@@ -254,6 +270,9 @@ body {
     background: var(--brand-primary);
     color: white;
     padding: 2rem 0;
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
 
 .footer-columns {
